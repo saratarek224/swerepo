@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+<title>courses</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style>
+
+body
+{
+	background-color:#7F95D1;
+	
+}
+th{
+ font-size:20px;
+}
+h2{
+text-align:center;
+color:white;
+}
+table,th,td
+{
+margin-left: 25%;
+ text-align: left; 
+  width:50%;
+}
+.button
+{
+
+     background-color: #F40076 ;
+    border: none;
+    color: white;
+    padding: 20px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 110px;
+    cursor: pointer;
+	border-radius: 45%;
+	margin-left:40%;
+	width: 10%;
+}
+</style>
+</head>
+<body>
+
+ <h2>Comments on Your Games </h2>
+        <table >
+            <tr>
+                <th>Comments</th>
+                
+            </tr>
+            <tr th:each="notify : ${notifications}">
+                <td th:text="${notify.Sname}"></td>
+                <td th:text="${notify.Cname}"></td>
+                
+            </tr>
+        </table>
+ 
+</body>
+</html>

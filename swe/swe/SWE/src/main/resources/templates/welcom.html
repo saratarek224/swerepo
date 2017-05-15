@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    
+    <head lang="en">
+         <title>Welcome Page</title>
+         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        
+          <link href="../../static/css/sytle.css"
+          th:href="@{css/style.css}" rel="stylesheet" media="screen"/>
+              <link href="../../static/css/font-awesome.min.css"
+          th:href="@{css/font-awesome.min.css}" rel="stylesheet" media="screen"/>
+          
+    </head>
+    <body>
+        
+        <header>
+            <div class="header_style">
+             <nav>
+                    <div class="logo">
+                        funny learnning<br/>
+                        <span>free minimal templete</span>
+                    </div>
+                 <div class="menu">
+                     <ul>
+                         <li><a href="#">About us </a></li>
+                         <li><a href="#">Contact us </a></li>
+                         <li><a href="#">Community</a> </li>
+                         <li><a href="/signin/options" th:href="@{/signin/options}">Sign in</a> </li>
+						 <li><a href="/signup/options" th:href="@{/signup/options}">Sign up</a> </li>
+                     </ul>
+                 </div>
+                </nav>
+          </div>
+            
+        </header>
+        
+        <!-- End Header  -->
+
+        
+        <!-- Start Ervices Section -->
+        <section class="our_courses">
+            
+            <div class="container">
+                
+                <div class="title">
+                    
+                    <p>ـــــــــــــــ<span>our main fields</span>ــــــــــــ</p>
+                </div>
+                
+                
+                <div class="course-content">
+                    <div class="course-section">
+                        <i class="fa fa-calculator fa-2x img"></i>
+                        <h2>Mathmatics</h2>
+                        <p>Learn the basics of mathmatics to be the best engineer in the future, the world wait for you to change it </p>
+                      
+                    </div>
+                    
+                    
+                    <div class="course-section">
+                        <i class="fa fa-mobile fa-2x img"></i>
+                        <h2>Technology </h2>
+                        <p>Technology grows speedly, learn the most recent technology to be able to add your touch in the comming technology</p>
+                     
+                    </div>
+                    
+                    <div class="course-section">
+                        <i class="fa fa-keyboard-o fa-2x img"></i>
+                        <h2>Coding</h2>
+                        <p>Programmers control the world by just writing some code,learn how to code to join these programmers</p><br/>
+                      
+                    </div>
+                    <div class="course-section">
+                        <i class="fa fa-flask fa-2x img"></i>
+                        <h2>Science</h2>
+                        <p>The nature have many things that have not been discoverd yet, learn what scientists discover and discover the remainning</p>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </section>
+        
+        <footer>
+            
+            
+                <h3>Copy Right &copy; X-team</h3>
+          
+            
+        </footer>
+        
+    </body>
+    
+</html>

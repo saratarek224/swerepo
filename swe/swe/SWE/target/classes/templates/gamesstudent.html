@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+<title>courses</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style>
+
+body
+{
+	background-color:#7F95D1;
+	
+}
+th{
+ font-size:20px;
+}
+h2{
+text-align:center;
+color:white;
+}
+table,th,td
+{
+margin-left: 25%;
+ text-align: left; 
+  width:50%;
+}
+.button{
+
+
+    border: none;
+    color: white;
+        text-align: center;
+      
+}
+</style>
+</head>
+<body>
+
+ <h2>Our games in this course</h2>
+        <table >
+            <tr>
+                <th>Name</th>
+                
+            </tr>
+            <tr th:each="game : ${games}">
+                <td th:text="${game.name}">Name</td>
+                <td> <a th:href="@{'/game/find/'+${game.name}}"> Play</a> </td>
+            </tr>
+        </table>
+</body>
+</html>

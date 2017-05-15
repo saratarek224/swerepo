@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+<title>login</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<p> Game Description </p>
+ <p th:text="${game.description}"> </p><br/>
+   <a href="/game/options/description" th:href="@{/game/options/description}" class="button"> edit</a>
+   <p> Questions </p>
+<a href="/game/editquestionsoptions" th:href="@{/game/editquestionsoptions}" class="button"> edit </a>
+
+ <p> Questions </p>
+
+</body>
+</html>

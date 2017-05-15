@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+<title>login</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style >
+div
+{    
+     float:left;
+      margin-right:5px;
+     position: absolute;
+     border-radius:50%;
+	 width:200px;
+	 height:170px;
+	 top:10%;
+	 left: 43%;
+	 background-image:url(../img/b.jpg);
+
+}
+
+input[type=email], input[type=password],input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    width: 30%;
+    margin-left:35%;
+}
+
+label
+{
+		margin-left:35%;
+
+}
+button {
+    background-color: #F40076;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    margin-left:35%;
+
+
+}
+body
+{
+	background-color: #7F95D1;
+}
+
+</style>
+</head>
+<body>
+ <form  th:action="@{/student/save}" th:object="${student}" method="get">
+<div ></div><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+      <label>Email</label> <br/>
+       <input type  = "email" placeholder = "Enter Your Email" required="required" th:field ="*{email}" /><br/>
+      <label>Name</label ><br/>
+	    <input type  = "text" placeholder = "Enter Your name" required="required" th:field ="*{name}" /> <br/>
+	 <label>Country</label> <br/>  
+	 <input type  = "text" placeholder = "Country" required="required"  th:field="*{country}" /><br/>
+	 <label>Password </label><br/>  
+	 <input type  = "password" placeholder = "Enter Your password" required="required"  th:field="*{password}" /><br/>
+	 
+	 <button type  = "submit"> Sign up</button>
+
+</form>
+</body>
+</html>
+
+

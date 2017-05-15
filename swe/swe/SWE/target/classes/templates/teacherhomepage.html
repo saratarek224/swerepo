@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+<title>home page</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style>
+div
+{
+	 float:left;
+     margin-left:35%;
+     position: absolute;
+     top:5%;
+	 width : 500px;
+	 height:100px;
+	 background-image:url(../img/welcome.jpg);
+
+}
+
+body{
+	background-color:#7F95D1;
+	
+}
+.button
+{
+    background-color:  #F40076 ;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+	border-radius: 45%;
+	margin-left:15%;
+	width: 10%;
+	
+}
+</style>
+</head>
+<body>
+<div >
+</div>
+<br/> <br/><br/> <br/><br/> <br/><br/> <br/><br/>
+
+<a href="/game/create" th:href = "@{/game/create}" class= "button" > Create Game </a>
+
+<a href="/createcourse" th:href = "@{/createcourse}" class="button"> Create Course </a>
+
+<a href="/showcourses" th:href="@{/showcourses}" class ="button"> Show Course </a>
+
+<a href="/game/edit" th:href="@{/game/edit}" class ="button"> Edit Game </a>
+
+<a href="/teacher/Shownotification" th:href="@{/teacher/Shownotification}" class ="button"> Show Notification </a>
+
+
+</body>
+</html>

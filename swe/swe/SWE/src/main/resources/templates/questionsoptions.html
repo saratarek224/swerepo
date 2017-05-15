@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+<title>login</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style>
+
+body
+{
+	background-color:#7F95D1;
+	
+}
+th{
+ font-size:20px;
+ 
+}
+h2{
+text-align:center;
+color:white;
+}
+table,th,td
+{
+ margin-left: 25%;
+ text-align: left; 
+  width:50%;
+font-size:16px;
+}
+.button{
+
+
+    border: none;
+    color: white;
+        text-align: center;
+      
+}
+</style>
+</head>
+<body>
+<h2> Questions</h2>
+        <table >
+            <tr>
+                <th>Name</th>
+                
+            </tr>
+            <tr th:each="q : ${questions}">
+                <td th:text="${q.statement}">Statment</td>
+                 <td> <a th:href="@{'/game/deletedquestion/'+${q.statement}}"> delete</a> </td>
+               
+            </tr>
+        </table>
+</body>
+</html>

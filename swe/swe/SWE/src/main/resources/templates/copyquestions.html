@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+<title>login</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style >
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    width: 30%;
+    margin-left:35%;
+    margin-top:5%;
+}
+input[type=submit] {
+    background-color: #F40076;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    margin-left:35%;
+
+
+}
+h2
+{
+     
+       
+		text-align:center;
+        
+}
+body
+{
+background-color: #7F95D1;
+}
+
+</style>
+</head>
+<body>
+
+
+ <h2>Questions in the Game</h2>
+        <table >
+            <tr>
+                <th>Question</th>
+                
+            </tr>
+            <tr th:each="q : ${q}">
+                <td th:text="${q.statement}">question</td>
+                </tr>
+                <tr th:each="q : ${q}">
+                <th>Answer</th>
+                <td th:text="${q.CorrectAnswer}">question</td>
+                </tr> 
+            
+        </table>
+        
+        <a th:href="@{/copyquestion}"> Copy</a> 
+</body>
+</html>

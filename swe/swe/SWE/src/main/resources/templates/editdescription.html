@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+<title>login</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+ <form  th:action="@{/game/newdescription}" th:object="${g}" method="get">
+
+<label> Enter the New Description</label><br/>
+	    <input type  = "text" th:field ="*{description}" /> <br/>
+	    
+	    <button type  = "submit" > Done </button>
+</form>
+</body>
+</html>

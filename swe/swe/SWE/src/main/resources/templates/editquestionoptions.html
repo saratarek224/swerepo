@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+<title>login</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style>
+ input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    width: 30%;
+    margin-left:35%;
+}
+.button
+{
+
+     background-color: #F40076 ;
+    border: none;
+    color: white;
+    padding: 20px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 110px;
+    cursor: pointer;
+	border-radius: 45%;
+	margin-left:23%;
+	width: 10%;
+}
+h2{
+text-align:center;
+		color:white;
+
+}
+body
+{
+background-color: #7F95D1;
+}
+
+</style>
+</head>
+<body>
+ <h2> Would you like to add Or delete questions? </h2><br />
+  <a href="/game/add/questions" th:href="@{/game/add/questions}" class="button">Add </a>
+ 
+   <a href="/game/delete/question" th:href="@{/game/delete/question}" class="button"> Delete </a>
+ 
+</body>
+</html>

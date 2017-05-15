@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+<title>login</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style>
+div
+{
+	 float:left;
+     margin-left:37%;
+     position: absolute;
+     top:7%;
+	 width : 350px;
+	 height:100px;
+	 background-image:url(../img/g.jpg);
+
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    width: 30%;
+    margin-left:35%;
+}
+button {
+    background-color: #F40076;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    margin-left:35%;
+
+
+}
+label
+{
+		margin-left:35%;
+
+}
+body
+{
+background-color: #7F95D1;
+}
+
+</style>
+</head>
+<body>
+ <form  th:action="@{/game/info}" th:object="${game}" method="get">
+ <div></div>
+     <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+     
+      <label> Enter the game name </label><br/>
+        <input type  = "text" th:field ="*{name}" /><br/>
+      <label> Enter the course to add the game in </label> <br />
+	    <input type  = "text" th:field ="*{SecondaryId}" /> <br/>
+	      <label> Enter the description of the game </label> <br />
+	    <input type  = "text" th:field ="*{description}" /> <br/>
+		<button type  = "submit" > Submit </button>
+
+</form>
+</body>
+</html>

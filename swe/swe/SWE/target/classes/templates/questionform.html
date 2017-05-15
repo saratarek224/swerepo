@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+<title>login</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<style>
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    width: 30%;
+    margin-left:35%;
+}
+button {
+    background-color: #F40076;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    margin-left:35%;
+
+
+}
+label
+{
+		margin-left:35%;
+
+}
+body
+{
+background-color: #7F95D1;
+}
+
+</style>
+<body>
+ <form  th:action="@{/game/recieve/question}" th:object="${question}" method="get">
+ 
+      <label>Enter the problem statement </label><br/>
+        <input type  = "text" th:field ="*{statement}" /><br/>
+      <label> Enter the Correct answer </label><br />
+	    <input type  = "text" th:field ="*{CorrectAnswer}" /> <br/>
+		<button type  = "submit">Submit</button>
+</form>
+</body>
+</html>

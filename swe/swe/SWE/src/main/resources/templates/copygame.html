@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+<title>login</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style>
+
+.button
+{
+
+    background-color: #F40076 ;
+    border: none;
+    color: white;
+    padding: 20px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 110px;
+    cursor: pointer;
+	border-radius: 45%;
+	margin-top:13%;
+	margin-left:43%;
+	width: 10%;
+}
+h2
+{
+     
+       
+		text-align:center;
+        color:white;
+}
+body
+{
+  background-color: #7F95D1;
+}
+
+</style>
+</head>
+<body>
+   <br/><br/><br/><br/><br/>
+     <label>Course:</label> <br/>
+  <h2 th:text="${game.SecondaryId}"></h2> <br/>
+  
+    <label>Name:</label> <br/>
+ <h2 th:text="${game.name}"></h2> <br/>
+<label>Descrition:</label> <br/>
+  <h2 th:text="${game.description}"></h2> <br/>
+  <a href="/game/copy" th:href="@{/game/copy}" class="button"> Copy</a>
+  <a href="/game/editt" th:href="@{/game/editt}" class="button"> edit</a>
+  
+  
+  
+</body>
+</html>
